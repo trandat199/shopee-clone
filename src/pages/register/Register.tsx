@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div className='bg-[rgb(238,_77,_45)]'>
       <div className='mx-auto bg-auto bg-no-repeat lg:h-[600px] lg:w-[1100px] lg:bg-[url(https://down-vn.img.susercontent.com/file/sg-11134004-23030-0zzd19u7qvov47)]'>
-        <div className=' grid h-full items-center p-5 lg:grid-cols-12'>
+        <div className='grid h-full items-center p-5 lg:grid-cols-12'>
           <div className='bg-white p-10 lg:col-span-12 lg:col-start-8'>
             <h2 className='text-4xl'>Đăng ký</h2>
             <form className='mt-7 flex flex-col gap-1' onSubmit={handleSubmit(onSubmit)}>

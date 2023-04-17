@@ -115,7 +115,7 @@ const Cart = () => {
                 type='checkbox'
                 checked={isActive}
                 aria-describedby='helper-checkbox-text'
-                className='h-7 w-7 cursor-pointer rounded border-gray-300  bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800'
+                className='h-7 w-7 cursor-pointer rounded border-gray-300 bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800'
                 onChange={handleCheckAll}
               />
               <p>Sản Phẩm</p>
@@ -132,7 +132,7 @@ const Cart = () => {
           {listPurchases &&
             listPurchases.map((item, index) => {
               return (
-                <div className=' grid items-center px-10 py-5 lg:grid-cols-2' key={item._id}>
+                <div className='grid items-center px-10 py-5 lg:grid-cols-2' key={item._id}>
                   <div className='col-span-1'>
                     <div className='grid lg:grid-cols-2'>
                       <div className='flex items-center gap-2 lg:gap-7'>
@@ -140,7 +140,7 @@ const Cart = () => {
                           type='checkbox'
                           checked={item.checked}
                           aria-describedby='helper-checkbox-text'
-                          className='h-7 w-7 cursor-pointer rounded border-gray-300  bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800'
+                          className='h-7 w-7 cursor-pointer rounded border-gray-300 bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800'
                           onChange={handleCheckItem(index)}
                         />
                         <img src={item.product.image} alt={item.product.name} className='w-[50px]' />

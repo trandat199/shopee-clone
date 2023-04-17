@@ -40,7 +40,7 @@ const ProductHome = () => {
     keepPreviousData: true,
     staleTime: 3 * 60 * 1000
   })
-  console.log(product)
+
   useEffect(() => {
     const Time = setInterval(() => {
       const hours: HTMLElement = document.getElementById('hours') as HTMLElement

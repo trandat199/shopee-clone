@@ -26,16 +26,12 @@ const ProductDetail = () => {
 
   const productdetail = data?.data
   const queryClient = useQueryClient()
-
+  console.log(isAuthenticated)
   const purchaseMutation = useMutation({
     mutationFn: () => purchaseApi.addToCart({ product_id: productdetail?.data._id as string, buy_count: quantity }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['purchases', { status: purchasesStatus.inCart }] })
-      if (isAuthenticated) {
-        nav('/cart')
-      } else {
-        nav('/login')
-      }
+      nav('/cart')
     }
   })
 
@@ -108,7 +104,7 @@ const ProductDetail = () => {
                     viewBox='0 0 24 24'
                     strokeWidth={1.5}
                     stroke='currentColor'
-                    className=' h-6 w-6 text-black'
+                    className='h-6 w-6 text-black '
                   >
                     <path
                       strokeLinecap='round'
@@ -124,7 +120,7 @@ const ProductDetail = () => {
                     viewBox='0 0 24 24'
                     strokeWidth={1.5}
                     stroke='currentColor'
-                    className=' h-6 w-6 text-black'
+                    className='h-6 w-6 text-black '
                   >
                     <path
                       strokeLinecap='round'
@@ -236,7 +232,11 @@ const ProductDetail = () => {
                 <button
                   className='flex items-center gap-2 border border-red-500 bg-red-100 px-6 py-4 capitalize text-red-500'
                   onClick={() => {
-                    purchaseMutation.mutate()
+                    if (isAuthenticated) {
+                      purchaseMutation.mutate()
+                    } else {
+                      nav('/login')
+                    }
                   }}
                 >
                   <svg
@@ -258,7 +258,11 @@ const ProductDetail = () => {
                 <button
                   className='bg-red-500 px-4 py-5 text-white'
                   onClick={() => {
-                    purchaseMutation.mutate()
+                    if (isAuthenticated) {
+                      purchaseMutation.mutate()
+                    } else {
+                      nav('/login')
+                    }
                   }}
                 >
                   Mua Ngay
