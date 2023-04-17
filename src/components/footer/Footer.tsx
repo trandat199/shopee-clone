@@ -11,7 +11,6 @@ const Footer = () => {
           <li>Indonesia</li>
           <li>Đài Loan</li>
           <li>Thái Lan</li>
-          <li>Malaysia</li>
         </ul>
       </div>
       <div className='mt-10 flex flex-col gap-5 text-center text-xl'>

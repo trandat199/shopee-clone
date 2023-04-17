@@ -27,7 +27,7 @@ const Register = () => {
   const onSubmit: SubmitHandler<SchemaAuth> = (data) => {
     registerAccountMutation.mutate(omit(data, ['confirm_password']), {
       onSuccess: () => {
-        toast.success('🦄 Wow so easy!', {
+        toast.success('Bạn đã đăng ký thành công', {
           position: 'top-right',
           autoClose: 500,
           hideProgressBar: false,
