@@ -12,7 +12,6 @@ import Password from './pages/user/pages/password/Password'
 import Cart from './pages/cart/Cart'
 import Purchase from './pages/user/pages/purchase/Purchase'
 import { Appcontext } from './contexts/app.context'
-import Product from './pages/product/ProductHome'
 import ProductHome from './pages/product/ProductHome'
 
 function ProtectedRoute() {
