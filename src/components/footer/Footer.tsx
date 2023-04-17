@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='mx-auto w-full bg-white py-10 lg:w-[1200px]'>
+    <div className='mx-auto w-full bg-white px-3 py-10 lg:w-[1200px]'>
       <div className='grid grid-cols-1 gap-3 lg:grid-cols-3'>
         <span className='text-center text-xl lg:text-start'>© 2023 Shopee. Tất cả các quyền được bảo lưu.</span>
         <ul className='flex items-center justify-center gap-2 text-lg lg:col-span-2 lg:justify-start lg:gap-5 lg:text-xl'>

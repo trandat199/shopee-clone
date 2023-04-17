@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AppProvider } from './contexts/app.context'
 import './index.css'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <QueryClientProvider client={queryClient}>
         <AppProvider>
           <App />
+          <ToastContainer />
         </AppProvider>
       </QueryClientProvider>
     </BrowserRouter>

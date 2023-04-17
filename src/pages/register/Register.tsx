@@ -9,11 +9,13 @@ import omit from 'lodash/omit'
 import { isAxiosUnprocessableEntityError } from 'src/utils/utils'
 import { ErrorResponse } from 'src/types/utils.type'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 const Register = () => {
   const {
     control,
     handleSubmit,
     setError,
+    reset,
     formState: { errors }
   } = useForm<SchemaAuth>({
     resolver: yupResolver(schemaAuth)
@@ -24,6 +26,19 @@ const Register = () => {
   })
   const onSubmit: SubmitHandler<SchemaAuth> = (data) => {
     registerAccountMutation.mutate(omit(data, ['confirm_password']), {
+      onSuccess: () => {
+        toast.success('🦄 Wow so easy!', {
+          position: 'top-right',
+          autoClose: 500,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: 'light'
+        })
+        reset()
+      },
       onError: (error) => {
         if (isAxiosUnprocessableEntityError<ErrorResponse<Omit<SchemaAuth, 'confirm_password'>>>(error)) {
           const FormError = error.response?.data.data
