@@ -9,7 +9,7 @@ const MainLayout = ({ children }: props) => {
   return (
     <div>
       <Header></Header>
-      {children}
+      <div className='mt-[80px] lg:mt-0'>{children}</div>
       <Footer></Footer>
     </div>
   )

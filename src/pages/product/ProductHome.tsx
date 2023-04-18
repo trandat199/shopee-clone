@@ -76,10 +76,11 @@ const ProductHome = () => {
   return (
     <div className='bg-[#e6e6e677]'>
       <div className='mx-auto py-5 lg:w-[1200px]'>
-        <div className='grid grid-cols-3 gap-2 lg:h-[235px]'>
-          <div className='z-1 col-span-2'>
+        <div className='grid grid-cols-1 gap-2  lg:h-[235px] lg:grid-cols-3'>
+          <div className='z-1 col-span-1 w-full lg:col-span-2'>
             <Swiper
               centeredSlides={true}
+              loop={true}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false
@@ -107,7 +108,7 @@ const ProductHome = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className='col-span-1 flex flex-col gap-2'>
+          <div className='col-span-1 hidden flex-col gap-2  lg:flex'>
             <img src='https://cf.shopee.vn/file/vn-50009109-5a201408909a0be439a3d963f39f46b7_xhdpi' alt='' />
             <img src='https://cf.shopee.vn/file/vn-50009109-5cbd9ef5af9a1b9d8e6486e751cff063_xhdpi' alt='' />
           </div>

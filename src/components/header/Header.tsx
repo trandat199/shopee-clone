@@ -42,7 +42,7 @@ const Header = () => {
   }
 
   return (
-    <div className='bg-[linear-gradient(-180deg,#f53d2d,#f63)] lg:h-[120px]'>
+    <div className='header bg-[linear-gradient(-180deg,#f53d2d,#f63)] lg:h-[120px]'>
       <div className='mx-auto lg:w-[1200px]'>
         <nav className='hidden justify-between text-xl text-white lg:flex lg:h-[35px]'>
           <ul className='flex items-center gap-5'>

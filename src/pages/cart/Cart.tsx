@@ -223,7 +223,7 @@ const Cart = () => {
                 </div>
               )
             })}
-          <div className='sticky bottom-0 z-10 mt-8 flex h-[100px] justify-between rounded-sm border border-gray-100 bg-white px-2 shadow sm:flex-row sm:items-center lg:p-5 lg:px-10'>
+          <div className='sticky bottom-0 z-10 mt-8 flex h-[100px] flex-col items-center gap-3 rounded-sm border border-gray-100 bg-white px-2 shadow sm:flex-row sm:items-center lg:justify-between lg:gap-0 lg:p-5 lg:px-10'>
             <div className='flex items-center gap-2 lg:gap-7'>
               <input type='checkbox' checked={isActive} onChange={handleCheckAll} className='h-7 w-7 cursor-pointer' />
               <p className='truncate whitespace-nowrap text-xl'>Xóa tất cả ({listPurchases.length})</p>
@@ -243,7 +243,7 @@ const Cart = () => {
                 Xóa
               </button>
             </div>
-            <div className='flex items-center gap-2 pl-4 lg:gap-5'>
+            <div className='flex flex-col items-center gap-3 pl-4 lg:flex-row lg:gap-5'>
               <p className='text-2xl'>
                 Tổng thanh toán ({purchaseAll.length} Sản phẩm):{' '}
                 <span className='text-3xl text-red-500'>{exchangeMenony(priceAll)}</span>
